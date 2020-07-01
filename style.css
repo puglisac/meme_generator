@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+header {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ3KbgV_iQhGFe8PfYVvp_TtxlsW6k23yrd1w&usqp=CAU');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100px;
+    border-radius: 5px;
+}
+
+h1 {
+    margin-left: 5px;
+}
+
+form {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.memeDiv {
+    position: relative;
+    width: 500px;
+    text-align: center;
+    margin: auto;
+}
+
+.meme {
+    margin: auto;
+    width: 100%;
+}
+
+.topText {
+    top: 0;
+}
+
+.bottomText {
+    bottom: 10px;
+}
+
+.topText,
+.bottomText {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-shadow: 0 0 2px black;
+    width: 100%;
+}
+
+#memes {
+    font-size: 3em;
+}
+
+label {
+    margin: 10px 5px 0px 10px;
+}
+
+input {
+    margin-top: 10px;
+}
+
+#submit {
+    margin-left: 10px;
+}
+
+a img {
+    box-shadow: none;
+    position: absolute;
+    right: 7px;
+    top: -5px;
+    margin-top: 4px;
+    opacity: 0;
+    display: block;
+    transition: all .5s ease-in-out;
+    width: 40px;
+}
+
+.memeDiv:hover a img {
+    opacity: 1;
+    z-index: 99;
+    position: absolute;
+    top: 5px;
+    cursor: pointer;
+}
+
+.memeDiv:after {
+    content: '';
+    width: 100%;
+    height: calc(100% - 10px);
+    position: absolute;
+    display: block;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0px;
+    z-index: 0;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+
+.memeDiv:hover:after {
+    opacity: 1;
+}
